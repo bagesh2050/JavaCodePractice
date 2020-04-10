@@ -1,6 +1,4 @@
 package com.demo1;
-import static org.junit.Assert.assertEquals;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;

@@ -72,7 +72,6 @@ class Base {
 		System.out.println("Set="+set.size());
 		System.out.println("HashSet Set="+hashSet.size());
 		System.out.println(hashSet);
-		System.out.println(linkedHashSet);
-		
+		System.out.println(linkedHashSet);	
 	}
 }

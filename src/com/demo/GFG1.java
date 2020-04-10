@@ -1,7 +1,4 @@
 package com.demo;
-// Java code to find count of sub-arrays 
-// with odd sum 
-import java.io.*; 
 
 class GFG1 { 
 	static int countOddSum(int ar[], 

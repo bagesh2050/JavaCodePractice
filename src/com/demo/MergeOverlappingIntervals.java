@@ -1,7 +1,7 @@
 package com.demo;
 // A Java program for merging overlapping intervals 
-import java.util.Arrays; 
-import java.util.Comparator; 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Stack; 
 public class MergeOverlappingIntervals { 
 
