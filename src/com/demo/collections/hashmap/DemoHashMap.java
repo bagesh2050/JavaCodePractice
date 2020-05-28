@@ -5,6 +5,8 @@ import java.util.Map;
 
 public class DemoHashMap {
 
+	static final int MAXIMUM_CAPACITY = 1 << 30;
+
 	public static void main(String[] args) {
 
 		System.out.println("\n#### First story - With No Method overridden #########");
@@ -110,6 +112,49 @@ public class DemoHashMap {
 		hashMap4.put(e34, e34.getName());
 
 		System.out.println(hashMap4);
+
+		Map<DifferentEmployee, Integer> map = new HashMap<>(MAXIMUM_CAPACITY + 1);
+
+		System.out.println("Map =" + map);
+
+		System.out.println("Map Max Capacity=" + MAXIMUM_CAPACITY);
+		System.out.println("Integer Max Value=" + Integer.MAX_VALUE);
+
+		System.out.println("Power of 2 Exponential Growth size value=" + tableSizeFor(2));
+
+		System.out.println("Power of 2 Exponential Growth size value=" + tableSizeFor(3));
+
+		System.out.println("Power of 2 Exponential Growth size value=" + tableSizeFor(17));
+
+		System.out.println("Power of 2 Exponential Growth size value=" + tableSizeFor(32));
+
+		System.out.println("Power of 2 Exponential Growth size value=" + tableSizeFor(33));
+
+		System.out.println("Power of 2 Exponential Growth max value=" + tableSizeFor(MAXIMUM_CAPACITY));
+
+		System.out.println("Power of 2 Exponential Growth max value+1=" + tableSizeFor(MAXIMUM_CAPACITY + 1));
+
+		// This commented code will need more than 10 GB of Java Heap size
+		/*
+		 * for (int i = 0; i <= MAXIMUM_CAPACITY; i++) { System.out.println("i="
+		 * + i); map.put(new DifferentEmployee(i, "Bagesh"), i); }
+		 */
+
+		System.out.println("Map size=" + map.size());
+
+		String binary = Long.toString(25L, 2);
+
+		System.out.println("Binary=" + binary);
+	}
+
+	static final int tableSizeFor(int cap) {
+		int n = cap - 1;
+		n |= n >>> 1;
+		n |= n >>> 2;
+		n |= n >>> 4;
+		n |= n >>> 8;
+		n |= n >>> 16;
+		return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
 	}
 
 }
