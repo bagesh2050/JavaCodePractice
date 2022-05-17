@@ -40,7 +40,7 @@ public class EmployeeWithHashAndEquals {
 			return true;
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass())
+		if (this.getClass() != obj.getClass())
 			return false;
 		EmployeeWithHashAndEquals other = (EmployeeWithHashAndEquals) obj;
 		if (id != other.id)

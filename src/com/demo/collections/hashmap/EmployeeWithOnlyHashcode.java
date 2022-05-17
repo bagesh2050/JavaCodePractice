@@ -3,7 +3,8 @@ package com.demo.collections.hashmap;
 public class EmployeeWithOnlyHashcode {
 	private int id;
 	private String name;
-
+	Object o;
+	
 	public EmployeeWithOnlyHashcode(int id, String name) {
 		this.id = id;
 		this.name = name;
